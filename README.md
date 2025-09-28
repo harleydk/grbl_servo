@@ -14,10 +14,7 @@ The #define RC_SERVO_SHORT (15) and RC_SERVO_LONG (31), in the modified 'spindle
 
 Note: the added RC Servo functionality will only operate in 'non laser' ($32=0) mode and will be ignored if you have $32 set to 1 (however, the frequency SPINDLE_TCCRB_INIT_MASK set 'cpu_map.h' will still be 61Hz rather than the default 0.98kHz used by most diode laser PWM/TTL inputs). To use this functionality use G-Code M3 to turn on the RC Servo and G-Code M5 to turn off the servo. The amount the RC Servo moves if controlled with G-Code S commands in the range 0-255."__
 
-I.e. those above instructions have been blended into this repo, so it's just a matter of cloning this and building and uploading the *.ino file. This will give you a GRBL 1.1 with servo-control.
-
-
-
+I.e. those above instructions have been blended into this repo, so it's just a matter of cloning this and building and uploading the *.ino file. This will give you a GRBL 1.1 with servo-control. BUT ONLY IF YOU SET $30=100! Apparently the 'max spindle speed' does have an effect. So, do that.
 
 <br />
 <br />
